@@ -11,8 +11,8 @@ html{scroll-behavior:smooth;}
 body{font-family:'Inter',sans-serif;background:#f5f0eb;color:#2a2420;overflow-x:hidden;}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(245,240,235,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(42,36,32,.08);}
-.nav-logo{font-family:'Fraunces',serif;font-size:2rem;font-weight:300;color:#2a2420;letter-spacing:.01em;line-height:1.3;}
-.nav-logo span{display:block;font-size:.90rem;color:#9a8b7e;font-family:'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-weight:400;}
+.nav-logo{font-family:'Fraunces',serif;font-size:1rem;font-weight:300;color:#2a2420;letter-spacing:.01em;line-height:1.3;}
+.nav-logo span{display:block;font-size:.72rem;color:#9a8b7e;font-family:'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-weight:400;}
 .nav-links{display:flex;gap:2rem;list-style:none;align-items:center;}
 .nav-links a{font-size:.78rem;color:#9a8b7e;text-decoration:none;letter-spacing:.04em;transition:color .2s;}
 .nav-links a:hover{color:#2a2420;}
@@ -116,6 +116,26 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   .contact{grid-template-columns:1fr;padding:5rem 1.5rem;gap:3rem;}
   footer{padding:1.5rem;flex-direction:column;text-align:center;}
 }
+
+/* REVIEWS */
+.reviews{background:#f5f0eb;padding:7rem 5rem;overflow:hidden;}
+.reviews-intro{max-width:760px;margin-bottom:3rem;}
+.reviews-sub{font-size:.9rem;line-height:1.9;color:#7a6355;font-weight:300;margin-top:1rem;}
+.reviews-carousel{position:relative;max-width:980px;margin:0 auto;min-height:360px;}
+.reviews-grid{display:grid;grid-template-columns:1fr;}
+.review-card{background:#fff;border-radius:24px;padding:2.4rem;border:1px solid rgba(42,36,32,.06);box-shadow:0 12px 40px rgba(42,36,32,.06);opacity:0;transform:translateY(30px) scale(.94);position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;pointer-events:none;transition:opacity .7s ease,transform .7s ease;}
+.review-card.active{opacity:1;transform:translateY(0) scale(1);position:relative;pointer-events:auto;}
+.review-card.entering{animation:reviewPop .75s cubic-bezier(.2,.9,.2,1) both;}
+@keyframes reviewPop{0%{opacity:0;transform:translateY(38px) scale(.92);}55%{opacity:1;transform:translateY(-10px) scale(1.02);}100%{opacity:1;transform:translateY(0) scale(1);}}
+.review-stars{color:#b5704a;letter-spacing:.08em;font-size:1rem;margin-bottom:1rem;}
+.review-card p{font-size:.9rem;line-height:1.9;color:#7a6355;font-weight:300;margin-bottom:1.1rem;}
+.review-card span{font-size:.72rem;color:#9a8b7e;letter-spacing:.04em;}
+.reviews-dots{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;margin-top:1.5rem;}
+.reviews-dot{width:8px;height:8px;border-radius:50%;border:0;background:#d8cabe;cursor:pointer;transition:all .25s ease;}
+.reviews-dot.active{width:26px;border-radius:100px;background:#b5704a;}
+.reviews-note{font-size:.74rem;line-height:1.7;color:#9a8b7e;margin:2rem auto 0;max-width:760px;}
+@media(max-width:900px){.reviews{padding:5rem 1.5rem}.reviews-carousel{min-height:430px}.review-card{padding:2rem;min-height:360px}.review-card.entering{animation:reviewPopMobile .75s cubic-bezier(.2,.9,.2,1) both}@keyframes reviewPopMobile{0%{opacity:0;transform:translateY(42px) scale(.91)}55%{opacity:1;transform:translateY(-8px) scale(1.015)}100%{opacity:1;transform:translateY(0) scale(1)}}}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-376509927"></script>
@@ -127,6 +147,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   gtag('config', 'AW-376509927');
   gtag('config', 'G-SFY5HK9PKR');
 </script>
+
 </head>
 <body>
 <nav>
@@ -135,6 +156,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#areas">Áreas</a></li>
     <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#avaliacoes">Avaliações</a></li>
     <li><a href="#contato" class="nav-cta">Agendar consulta</a></li>
   </ul>
 </nav>
@@ -149,7 +171,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
     <div class="hero-divider"></div>
     <p class="hero-sub">Psicoterapia especializada em Logoterapia, Análise Existencial e TCC. Atendimento presencial e online a partir dos 12 anos.</p>
     <div class="hero-actions">
-      <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="return gtag_report_conversion(this.href);"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
+      <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="gtag('event', 'conversion', {'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB'});" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
       <a href="#sobre" class="btn-ghost">Conheça Patricia →</a>
     </div>
     <div class="hero-crp">CRP 05/64123</div>
@@ -174,7 +196,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
       <span class="spec-chip">Análise Existencial</span>
       <span class="spec-chip">Online & Presencial</span>
     </div>
-    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="return gtag_report_conversion(this.href);">Agendar primeira consulta</a>
+    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="gtag('event', 'conversion', {'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB'});" >Agendar primeira consulta</a>
   </div>
 </section>
 
@@ -205,6 +227,75 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   </div>
 </section>
 
+<section class="reviews" id="avaliacoes">
+  <div class="reviews-intro">
+    <div class="eyebrow">Avaliações</div>
+    <h2 class="areas-title">O que dizem sobre o <em>atendimento</em></h2>
+    <p class="reviews-sub">Depoimentos públicos e mensagens recebidas sobre a experiência de cuidado, escuta e acolhimento no processo psicoterapêutico.</p>
+  </div>
+  <div class="reviews-carousel">
+    <div class="reviews-grid">
+    <div class="review-card active">
+      <div class="review-stars">★★★★★</div>
+      <p>"Profissional atenciosa, excelente e muito cuidadosa. Indico o acompanhamento, vale super a pena."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"A Patrícia foi uma grata surpresa. Acolhe de forma afetiva, sem julgamento, e transmite segurança durante o processo."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Excelente profissional, muito qualificada e humana. Sem palavras para agradecer."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"A psicóloga Patrícia foi um divisor de águas na minha vida. Excelente profissional, oferece apoio emocional e um atendimento muito humano."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Cuidado e profissionalismo. A presença da Patrícia trouxe uma nova dimensão ao meu processo."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Profissional dedicada, comprometida com seu trabalho, dinâmica e preocupada em oferecer feedbacks aos pacientes."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Uma profissional nota 1000, dedicada e atenciosa. Tenho muitos elogios pelo cuidado e pela condução das consultas."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Excelente profissional. Consegui encontrar novo sentido e mais ânimo através das conversas."</p>
+      <span>— Avaliação pública no Google</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Como é bom sentir o acolhimento no olhar. Muito obrigada pelo cuidado."</p>
+      <span>— Mensagem recebida de paciente</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Você sempre tão atenciosa. Cuidado, escuta e muito estudo. Obrigada por tanto."</p>
+      <span>— Mensagem recebida de paciente</span>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>"Agradeço os cuidados. É gratificante ver minha filha feliz e gostando da terapia."</p>
+      <span>— Mensagem recebida de familiar</span>
+    </div>
+    </div>
+    <div class="reviews-dots" aria-label="Selecionar avaliação"></div>
+  </div>
+  <p class="reviews-note">As avaliações foram adaptadas para preservar privacidade, identidade e detalhes pessoais, mantendo o sentido original dos relatos.</p>
+</section>
+
 <section class="contact" id="contato">
   <div class="contact-left">
     <div class="eyebrow">Contato</div>
@@ -220,7 +311,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   <div class="contact-right">
     <h3>Vamos conversar?</h3>
     <p>Atendimento a partir de 12 anos · Presencial e online</p>
-    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="wa-big" onclick="return gtag_report_conversion(this.href);"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
+    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="wa-big" onclick="gtag('event', 'conversion', {'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB'});" ><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
     <div class="hrs">
       <div class="hr-box"><div class="hr-day">Segunda — Quinta</div><div class="hr-time">08h — 19h</div></div>
       <div class="hr-box"><div class="hr-day">Sexta</div><div class="hr-time">Sob consulta</div></div>
@@ -236,26 +327,9 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   </div>
   <div class="footer-crp">CRP 05/64123 · Rio de Janeiro</div>
 </footer>
+
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-
-  if (typeof gtag === 'function') {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB',
-      'event_callback': callback
-    });
-    setTimeout(callback, 800);
-    return false;
-  }
-
-  callback();
-  return false;
-}
+document.addEventListener('DOMContentLoaded',function(){const cards=Array.from(document.querySelectorAll('.review-card'));const dotsWrap=document.querySelector('.reviews-dots');if(!cards.length||!dotsWrap)return;let current=0;function fit(){const c=document.querySelector('.reviews-carousel');if(c)c.style.minHeight=Math.max(cards[current].offsetHeight+70,window.innerWidth<=900?430:360)+'px'}cards.forEach((card,i)=>{const dot=document.createElement('button');dot.className='reviews-dot'+(i===0?' active':'');dot.type='button';dot.setAttribute('aria-label','Mostrar avaliação '+(i+1));dot.onclick=()=>show(i,true);dotsWrap.appendChild(dot)});const dots=Array.from(dotsWrap.querySelectorAll('.reviews-dot'));function show(i,manual){cards[current].classList.remove('active','entering');dots[current].classList.remove('active');current=i;cards[current].classList.add('active');void cards[current].offsetWidth;cards[current].classList.add('entering');dots[current].classList.add('active');fit();setTimeout(()=>cards[current].classList.remove('entering'),800);if(manual)restart()}function next(){show((current+1)%cards.length,false)}let timer=setInterval(next,4200);function restart(){clearInterval(timer);timer=setInterval(next,4200)}window.addEventListener('resize',fit);fit()});
 </script>
 </body>
 </html>
