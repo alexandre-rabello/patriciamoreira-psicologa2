@@ -381,6 +381,28 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   }
 }
 
+
+.area-card--list{display:flex;flex-direction:column;}
+.area-list{list-style:none;margin-top:.6rem;display:grid;grid-template-columns:1fr 1fr;gap:.4rem .75rem;}
+.area-list li{display:flex;align-items:flex-start;gap:.5rem;font-size:.84rem;line-height:1.5;color:#7a6355;font-weight:300;}
+.area-check{color:#b5704a;font-size:.85rem;flex-shrink:0;margin-top:.1rem;}
+
+.benefits{background:#f5f0eb;padding:7rem 5rem;}
+.benefits-header{text-align:center;margin-bottom:3.5rem;}
+.benefits-title{font-family:'Fraunces',serif;font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;color:#2a2420;line-height:1.2;}
+.benefits-title em{font-style:italic;color:#b5704a;}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.benefit-card{background:#fff;border-radius:20px;padding:2rem 1.75rem;border:1px solid rgba(42,36,32,.06);box-shadow:0 2px 16px rgba(42,36,32,.04);transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden;}
+.benefit-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#b5704a,#d4956f);transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+.benefit-card:hover{transform:translateY(-4px);box-shadow:0 10px 36px rgba(42,36,32,.09);}
+.benefit-card:hover::before{transform:scaleX(1);}
+.benefit-icon{display:block;margin-bottom:1.1rem;line-height:1;width:32px;height:32px;}
+.benefit-name{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:400;color:#2a2420;margin-bottom:.65rem;line-height:1.25;}
+.benefit-desc{font-size:.85rem;line-height:1.8;color:#7a6355;font-weight:300;}
+@media(max-width:900px){
+  .benefits{padding:5rem 1.5rem;}
+  .benefits-grid{grid-template-columns:1fr;}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-376509927"></script>
@@ -400,6 +422,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#areas">Áreas</a></li>
     <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#beneficios">Psicoterapia</a></li>
     <li><a href="#avaliacoes">Avaliações</a></li>
     <li><a href="#contato" class="nav-cta">Agendar consulta</a></li>
   </ul>
@@ -432,10 +455,10 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
     <div class="eyebrow">Sobre mim</div>
     <h2 class="about-name">Patricia <em>Moreira</em></h2>
     <span class="crp-tag">CRP 05/64123 · Rio de Janeiro</span>
-    <p class="about-p">Psicóloga clínica, graduada em Psicologia, com especializações em Logoterapia e Análise Existencial e Terapia Cognitivo-Comportamental (TCC).</p>
-    <p class="about-p">Acredito em uma psicologia acolhedora, ética e humanizada, com foco na promoção de sentido, autonomia emocional e qualidade de vida. Minha condução terapêutica busca auxiliar o paciente no enfrentamento do sofrimento emocional, no fortalecimento dos recursos internos e na construção de uma vida mais equilibrada e consciente.</p>
-    <p class="about-p">Atuo no acompanhamento de demandas relacionadas à ansiedade, depressão, conflitos emocionais e relacionais, autoestima, sofrimento existencial, transtornos de personalidade, processos de luto, estresse, esgotamento emocional e desenvolvimento pessoal, respeitando sempre a singularidade e o tempo de cada indivíduo</p>
-    <p class="about-p">Sou apreciadora da natureza e de hábitos que promovam saúde, longevidade e envelhecimento saudável. Gosto de atividades físicas como ciclismo, musculação e corrida, mesmo de forma bem amadora, e valorizo tudo aquilo que contribui para o equilíbrio e o bem-estar.</p>
+    <p class="about-p">Psicóloga clínica, graduada em Psicologia, com especializações em Logoterapia e Análise Existencial e Terapia Cognitivo-Comportamental (TCC). Acredito em uma psicologia acolhedora, ética e humanizada, com foco na promoção de sentido, autonomia emocional e qualidade de vida.</p>
+    <p class="about-p">Ao longo da vida, todos nós atravessamos momentos que nos convidam a refletir sobre nossas emoções, escolhas e caminhos. Meu trabalho consiste em acompanhar cada pessoa nesse percurso, oferecendo um espaço de escuta, acolhimento e reflexão, respeitando sempre sua singularidade, sua história e seu tempo.</p>
+    <p class="about-p">Busco auxiliar no enfrentamento do sofrimento emocional e na construção de uma vida mais consciente, equilibrada e alinhada aos próprios valores. O processo terapêutico pode favorecer o autoconhecimento, o fortalecimento dos recursos internos e o desenvolvimento de estratégias para lidar com os desafios da vida de forma mais saudável e significativa.</p>
+    <p class="about-p">Sou apreciadora da natureza e de hábitos que promovam saúde, longevidade e envelhecimento saudável. Valorizo tudo aquilo que contribui para o equilíbrio e o bem-estar, princípios que também permeiam minha atuação profissional. Entre em contato e saiba como funcionam os atendimentos.</p>
     <div class="spec-row">
       <span class="spec-chip">Logoterapia e Análise Existencial</span>
       <span class="spec-chip">Terapia Cognitivo Comportamental</span>
@@ -456,24 +479,83 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
     <div class="area-card"><span class="area-icon">01</span><div class="area-name">Ansiedade</div><p class="area-desc">Estratégias para reduzir a ansiedade, controlar preocupações excessivas e retomar o senso de controle.</p></div>
     <div class="area-card"><span class="area-icon">02</span><div class="area-name">Depressão</div><p class="area-desc">Suporte no enfrentamento da tristeza profunda, falta de motivação e vazio existencial.</p></div>
     <div class="area-card"><span class="area-icon">03</span><div class="area-name">Autoestima</div><p class="area-desc">Fortalecimento da autoimagem e superação de crenças limitantes para uma relação mais gentil consigo.</p></div>
-    <div class="area-card"><span class="area-icon">04</span><div class="area-name">Relacionamentos</div><p class="area-desc">Auxílio em conflitos amorosos, familiares ou sociais e construção de vínculos mais saudáveis.</p></div>
-    <div class="area-card"><span class="area-icon">05</span><div class="area-name">Regulação Emocional</div><p class="area-desc">Habilidades para identificar, compreender e gerenciar emoções de forma saudável e resiliente.</p></div>
-    <div class="area-card"><span class="area-icon">06</span><div class="area-name">Autoconhecimento</div><p class="area-desc">Para quem busca entender seus padrões e motivações e construir uma vida com mais sentido.</p></div>
-    <div class="area-card"><span class="area-icon">07</span><div class="area-name">Luto</div><p class="area-desc">Processo de acolhimento e elaboração das perdas, respeitando o tempo e a singularidade de cada vivência.</p></div>
-    <div class="area-card"><span class="area-icon">08</span><div class="area-name">Estresse</div><p class="area-desc">Auxílio no manejo do estresse e da sobrecarga emocional, promovendo mais equilíbrio, bem-estar e qualidade de vida.</p></div>
-    <div class="area-card"><span class="area-icon">09</span><div class="area-name">Transtornos de Personalidade</div><p class="area-desc">Acompanhamento psicológico voltado à compreensão de padrões emocionais, relacionais e comportamentais que impactam a vida cotidiana.</p></div>
-  </div>
+    <div class="area-card"><span class="area-icon">04</span><div class="area-name">Regulação Emocional</div><p class="area-desc">Habilidades para identificar, compreender e gerenciar emoções de forma saudável e resiliente.</p></div>
+    <div class="area-card"><span class="area-icon">05</span><div class="area-name">Luto</div><p class="area-desc">Processo de acolhimento e elaboração das perdas, respeitando o tempo e a singularidade de cada vivência.</p></div>
+    <div class="area-card area-card--list"><span class="area-icon">06</span><div class="area-name">Outros acolhimentos</div><ul class="area-list">
+  <li><span class="area-check">✔</span>Traumas e Estresse</li>
+  <li><span class="area-check">✔</span>TOC</li>
+  <li><span class="area-check">✔</span>Fobias específicas</li>
+  <li><span class="area-check">✔</span>Medos e inseguranças</li>
+  <li><span class="area-check">✔</span>Autoconhecimento</li>
+  <li><span class="area-check">✔</span>Relacionamentos</li>
+  <li><span class="area-check">✔</span>Transtornos da Personalidade</li>
+</ul></div>
+    </div>
 </section>
 
 <section class="how" id="como-funciona">
   <div class="how-label">Como funciona</div>
   <h2 class="how-title">Três passos para <em>começar</em></h2>
   <div class="how-steps">
-    <div class="how-card"><div class="how-num">01</div><div class="how-name">Entre em contato</div><p class="how-desc">Envie uma mensagem pelo WhatsApp. Sem burocracia — é só dizer que quer agendar e eu te respondo.</p></div>
+    <div class="how-card"><div class="how-num">01</div><div class="how-name">Entre em contato</div><p class="how-desc">Envie uma mensagem pelo WhatsApp. Sem burocracia, é só dizer que quer agendar e eu te respondo.</p></div>
     <div class="how-card"><div class="how-num">02</div><div class="how-name">Primeira sessão</div><p class="how-desc">Nos conhecemos, você conta sobre você e entendemos juntos o que te trouxe até aqui.</p></div>
-    <div class="how-card"><div class="how-num">03</div><div class="how-name">Seu processo</div><p class="how-desc">Definimos a frequência e o caminho — sempre no seu ritmo, com respeito à sua história.</p></div>
+    <div class="how-card"><div class="how-num">03</div><div class="how-name">Seu processo</div><p class="how-desc">Definimos a frequência e o caminho. Sempre no seu ritmo, com respeito à sua história.</p></div>
   </div>
 </section>
+
+<section class="benefits" id="beneficios">
+  <div class="benefits-header">
+    <div class="eyebrow" style="margin-bottom:.75rem;">Psicoterapia</div>
+    <h2 class="benefits-title">Como a psicoterapia pode contribuir<br>para o seu <em>bem-estar?</em></h2>
+  </div>
+  <div class="benefits-grid">
+
+    <div class="benefit-card">
+      <div class="benefit-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#b5704a" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <circle cx="12" cy="5" r="2"/>
+  <path d="M12 7v5"/>
+  <path d="M9 10l-4 3M15 10l4 3"/>
+  <path d="M10 12l-2 8M14 12l2 8"/>
+  <path d="M8 20h8" opacity=".5"/>
+  <path d="M7 13h10" opacity=".3"/>
+</svg></div>
+      <div class="benefit-name">Autoconhecimento</div>
+      <p class="benefit-desc">A terapia favorece a compreensão dos seus pensamentos, emoções, comportamentos e padrões de relacionamento, ajudando você a se perceber com mais clareza.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b5704a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 8v4l3 3"/></svg></div>
+      <div class="benefit-name">Manejo da ansiedade e emoções</div>
+      <p class="benefit-desc">A psicoterapia auxilia no desenvolvimento de estratégias para lidar com ansiedade, estresse, tristeza, insegurança e sobrecarga emocional.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b5704a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="benefit-name">Relacionamentos mais saudáveis</div>
+      <p class="benefit-desc">O processo terapêutico contribui para melhorar a comunicação, fortalecer limites e compreender melhor conflitos familiares, afetivos e interpessoais.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b5704a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <div class="benefit-name">Tomada de decisões e sentido de vida</div>
+      <p class="benefit-desc">A terapia pode ajudar você a refletir sobre escolhas, valores, propósito e caminhos possíveis diante de fases difíceis ou momentos de mudança.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b5704a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="benefit-name">Apoio em fases de transição</div>
+      <p class="benefit-desc">Mudanças, perdas, separações, luto, crises pessoais ou profissionais podem ser elaboradas com mais cuidado e segurança no espaço terapêutico.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="benefit-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b5704a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <div class="benefit-name">Fortalecimento emocional</div>
+      <p class="benefit-desc">A psicoterapia favorece autonomia, autoestima, responsabilidade pessoal e construção de recursos internos para enfrentar os desafios da vida.</p>
+    </div>
+
+  </div>
+</section>
+
 
 
 <section class="google-reviews" id="avaliacoes">
