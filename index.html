@@ -428,6 +428,507 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   }
 }
 
+
+/* FORMULÁRIO FALE CONOSCO */
+.contact-form-section{
+  padding:6rem 1.25rem;
+  background:#f7f0eb;
+}
+.contact-form-wrap{
+  max-width:1120px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:3rem;
+  align-items:start;
+}
+.contact-form-heading h2{
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:clamp(2.2rem,4vw,4rem);
+  line-height:1.05;
+  color:#2a2420;
+  margin:.7rem 0 1rem;
+}
+.contact-form-heading p{
+  color:#7a6257;
+  line-height:1.7;
+  font-size:1rem;
+  max-width:440px;
+}
+.contact-form{
+  background:#fff;
+  border-radius:24px;
+  padding:2rem;
+  box-shadow:0 18px 45px rgba(65,44,32,.08);
+}
+.form-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.contact-form label{
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+  font-size:.9rem;
+  font-weight:600;
+  color:#5b463d;
+  margin-bottom:1rem;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;
+  border:1px solid #eadbd3;
+  background:#fffaf7;
+  border-radius:14px;
+  padding:.95rem 1rem;
+  font:inherit;
+  color:#2a2420;
+  outline:none;
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.contact-form textarea{
+  resize:vertical;
+  min-height:130px;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  border-color:#b5704a;
+  box-shadow:0 0 0 3px rgba(181,112,74,.12);
+}
+.form-consent{
+  flex-direction:row!important;
+  align-items:flex-start;
+  gap:.75rem!important;
+  font-weight:400!important;
+  color:#7a6257!important;
+  line-height:1.5;
+}
+.form-consent input{
+  width:auto!important;
+  margin-top:.25rem;
+  accent-color:#b5704a;
+}
+.form-actions{
+  display:flex;
+  gap:.85rem;
+  flex-wrap:wrap;
+  margin-top:.75rem;
+}
+.form-primary,
+.form-secondary{
+  border:0;
+  border-radius:999px;
+  padding:.95rem 1.35rem;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.form-primary{
+  background:#b5704a;
+  color:#fff;
+  box-shadow:0 12px 28px rgba(181,112,74,.24);
+}
+.form-secondary{
+  background:#efe3dc;
+  color:#7a4f39;
+}
+.form-primary:hover,
+.form-secondary:hover{
+  transform:translateY(-1px);
+}
+.form-note{
+  margin-top:1rem;
+  color:#8b7368;
+  font-size:.86rem;
+  line-height:1.55;
+}
+@media(max-width:900px){
+  .contact-form-wrap{
+    grid-template-columns:1fr;
+    gap:2rem;
+  }
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+  .contact-form{
+    padding:1.35rem;
+  }
+}
+
+
+/* FORMULÁRIO INTEGRADO AO CONTATO - VERSÃO FINAL */
+.contact-right-form{
+  padding:2.4rem!important;
+}
+.contact-form-top{
+  margin-bottom:1.4rem;
+}
+.contact-right-form h3{
+  font-family:Georgia, "Times New Roman", serif!important;
+  font-weight:400!important;
+  font-size:clamp(2rem,3vw,3.1rem)!important;
+  line-height:1.08!important;
+  color:#2a2420!important;
+  margin:0 0 .5rem!important;
+}
+.contact-form-inline{
+  background:#fff!important;
+  border-radius:22px!important;
+  padding:1.55rem!important;
+  box-shadow:0 14px 35px rgba(65,44,32,.08)!important;
+}
+.contact-form-title{
+  font-family:Georgia, "Times New Roman", serif!important;
+  font-weight:400!important;
+  font-size:clamp(1.9rem,2.7vw,2.75rem)!important;
+  line-height:1.08!important;
+  color:#2a2420!important;
+  margin:0 0 .55rem!important;
+}
+.contact-form-intro{
+  color:#8b7368!important;
+  line-height:1.6!important;
+  margin:0 0 1.25rem!important;
+}
+.optional-field{
+  font-weight:400;
+  color:#9a8377;
+}
+.contact-form .form-grid{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:1rem!important;
+}
+.contact-form label{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:.42rem!important;
+  font-size:.88rem!important;
+  font-weight:700!important;
+  color:#5b463d!important;
+  margin-bottom:1rem!important;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%!important;
+  border:1px solid #eadbd3!important;
+  background:#fffaf7!important;
+  border-radius:14px!important;
+  padding:.9rem 1rem!important;
+  font:inherit!important;
+  color:#2a2420!important;
+  outline:none!important;
+  box-sizing:border-box!important;
+}
+.contact-form textarea{
+  resize:vertical!important;
+  min-height:115px!important;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  border-color:#b5704a!important;
+  box-shadow:0 0 0 3px rgba(181,112,74,.12)!important;
+}
+.form-consent{
+  flex-direction:row!important;
+  align-items:flex-start!important;
+  gap:.75rem!important;
+  font-weight:400!important;
+  color:#7a6257!important;
+  line-height:1.48!important;
+  font-size:.85rem!important;
+}
+.form-consent input{
+  width:auto!important;
+  margin-top:.25rem!important;
+  accent-color:#b5704a!important;
+}
+.form-consent a{
+  color:#b5704a!important;
+  text-decoration:underline!important;
+}
+.form-whatsapp-only{
+  width:auto!important;
+  border:0!important;
+  border-radius:999px!important;
+  padding:.95rem 1.45rem!important;
+  font-weight:800!important;
+  cursor:pointer!important;
+  background:#b5704a!important;
+  color:#fff!important;
+  box-shadow:0 12px 28px rgba(181,112,74,.24)!important;
+}
+.form-note{
+  margin-top:1rem!important;
+  color:#8b7368!important;
+  font-size:.82rem!important;
+  line-height:1.55!important;
+}
+.contact-hours-after-form{
+  margin-top:1.2rem!important;
+}
+.privacy-note-section{
+  padding:4rem 1.25rem;
+  background:#fffaf7;
+}
+.privacy-note-wrap{
+  max-width:980px;
+  margin:0 auto;
+  color:#6d574d;
+  line-height:1.75;
+}
+.privacy-note-wrap h2{
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:400;
+  font-size:clamp(2rem,3vw,3.2rem);
+  color:#2a2420;
+  margin:.5rem 0 1rem;
+}
+.privacy-note-wrap a{
+  color:#b5704a;
+}
+@media(max-width:900px){
+  .contact-form .form-grid{
+    grid-template-columns:1fr!important;
+  }
+  .contact-right-form{
+    padding:1.35rem!important;
+  }
+  .contact-form-inline{
+    padding:1.2rem!important;
+  }
+}
+
+
+/* AJUSTES FINAIS - CONTATO E FORMULÁRIO */
+.contact{
+  align-items:center!important;
+  gap:clamp(2rem,4vw,4rem)!important;
+}
+.contact-right-form{
+  max-width:720px!important;
+  margin-left:auto!important;
+  padding:1.8rem!important;
+  border-radius:24px!important;
+}
+.contact-form-top h3,
+.contact-right-form h3{
+  font-family:Georgia, "Times New Roman", serif!important;
+  font-weight:400!important;
+  font-size:clamp(2rem,3.2vw,3.15rem)!important;
+  line-height:1.08!important;
+  letter-spacing:0!important;
+}
+.contact-form-inline{
+  padding:1.35rem!important;
+  border-radius:20px!important;
+}
+.contact-form-title{
+  font-family:Georgia, "Times New Roman", serif!important;
+  font-weight:400!important;
+  font-size:clamp(1.65rem,2.2vw,2.25rem)!important;
+  line-height:1.1!important;
+  margin-bottom:.35rem!important;
+}
+.contact-form-intro{
+  margin-bottom:1rem!important;
+}
+.contact-form .form-grid{
+  grid-template-columns:1fr 1fr!important;
+  gap:.85rem!important;
+  align-items:end!important;
+}
+.contact-form label{
+  min-width:0!important;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+}
+.contact-form select#cfTime{
+  height:48px!important;
+  line-height:48px!important;
+  padding:.75rem 2.4rem .75rem 1rem!important;
+  appearance:auto!important;
+}
+.contact-form textarea{
+  min-height:96px!important;
+}
+.contact-hours-after-form{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:.85rem!important;
+  margin-top:1rem!important;
+}
+.privacy-note-section{
+  display:none!important;
+}
+.whatsapp-float{
+  position:fixed!important;
+  right:22px!important;
+  bottom:22px!important;
+  z-index:9999!important;
+  width:58px!important;
+  height:58px!important;
+  border-radius:50%!important;
+  background:#25d366!important;
+  color:#fff!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-shadow:0 12px 30px rgba(37,211,102,.35)!important;
+  text-decoration:none!important;
+  transition:transform .2s ease, box-shadow .2s ease!important;
+}
+.whatsapp-float:hover{
+  transform:translateY(-2px) scale(1.03)!important;
+  box-shadow:0 16px 36px rgba(37,211,102,.42)!important;
+}
+.whatsapp-float svg{
+  width:30px!important;
+  height:30px!important;
+}
+@media(max-width:900px){
+  .contact-right-form{
+    max-width:100%!important;
+    margin:0!important;
+    padding:1.25rem!important;
+  }
+  .contact-form .form-grid,
+  .contact-hours-after-form{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* AJUSTES FINAIS SOLICITADOS - FORMULÁRIO CONTATO */
+.contact-form-top{
+  display:none!important;
+}
+.contact-right-form{
+  max-width:680px!important;
+  padding:1.45rem!important;
+}
+.contact-form-inline{
+  padding:1.35rem!important;
+}
+.contact-form-title{
+  font-family:Georgia, "Times New Roman", serif!important;
+  font-weight:400!important;
+  font-size:clamp(2rem,3vw,3rem)!important;
+  line-height:1.08!important;
+  letter-spacing:0!important;
+  color:#2a2420!important;
+  margin:0 0 .55rem!important;
+}
+.contact-form .form-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  gap:1rem!important;
+  align-items:end!important;
+}
+.contact-form select#cfTime{
+  width:100%!important;
+  max-width:100%!important;
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+.form-consent{
+  display:grid!important;
+  grid-template-columns:18px 1fr!important;
+  align-items:start!important;
+  column-gap:.75rem!important;
+  margin:1rem 0!important;
+  color:#5b463d!important;
+  font-weight:600!important;
+  line-height:1.45!important;
+}
+.form-consent input[type="checkbox"]{
+  grid-column:1!important;
+  width:16px!important;
+  height:16px!important;
+  margin:.15rem 0 0 0!important;
+  padding:0!important;
+  accent-color:#b5704a!important;
+}
+.form-consent span{
+  grid-column:2!important;
+  display:block!important;
+}
+.form-consent a{
+  color:#b5704a!important;
+  text-decoration:underline!important;
+}
+@media(max-width:900px){
+  .contact-right-form{
+    max-width:100%!important;
+  }
+  .contact-form .form-grid{
+    grid-template-columns:1fr!important;
+  }
+}
+
+
+/* CORREÇÕES FINAIS - FORMULÁRIO */
+.contact-form-title{
+  font-family: inherit!important;
+  font-weight: 400!important;
+  font-size: clamp(2.1rem, 3.1vw, 3.25rem)!important;
+  line-height: 1.08!important;
+  letter-spacing: 0!important;
+  color: #2a2420!important;
+}
+.form-consent{
+  display: flex!important;
+  flex-direction: row!important;
+  align-items: flex-start!important;
+  justify-content: flex-start!important;
+  gap: .65rem!important;
+  margin: 1rem 0!important;
+  width: 100%!important;
+  line-height: 1.45!important;
+  color: #5b463d!important;
+}
+.form-consent input[type="checkbox"]{
+  flex: 0 0 16px!important;
+  width: 16px!important;
+  height: 16px!important;
+  min-width: 16px!important;
+  margin: .2rem 0 0 0!important;
+  padding: 0!important;
+  accent-color: #b5704a!important;
+}
+.form-consent span{
+  display: block!important;
+  flex: 1 1 auto!important;
+  margin: 0!important;
+}
+.form-consent a{
+  color:#b5704a!important;
+  text-decoration:underline!important;
+}
+
+
+/* CORREÇÃO DEFINITIVA DA FONTE DO TÍTULO DO FORMULÁRIO */
+.contact-form-title,
+.contact-right-form .contact-form-title,
+form.contact-form .contact-form-title{
+  font-family: Georgia, "Times New Roman", serif!important;
+  font-weight: 400!important;
+  font-size: clamp(2.1rem, 3.1vw, 3.25rem)!important;
+  line-height: 1.08!important;
+  letter-spacing: 0!important;
+  color: #2a2420!important;
+}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-376509927"></script>
@@ -439,6 +940,21 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
   gtag('config', 'AW-376509927');
   gtag('config', 'G-SFY5HK9PKR');
 </script>
+
+<style id="lgpd-fix">
+.form-consent,
+.privacy-consent{
+display:flex!important;
+align-items:flex-start!important;
+gap:12px!important;
+}
+.form-consent input[type=checkbox],
+.privacy-consent input[type=checkbox]{
+margin-top:4px!important;
+flex-shrink:0!important;
+}
+</style>
+
 </head>
 <body>
 <nav>
@@ -461,10 +977,10 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
     <span class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bonsucesso · Rio de Janeiro</span>
     <h1 class="hero-title">Toda mudança começa quando você decide <em>se cuidar</em></h1>
     <div class="hero-divider"></div>
-    <p class="hero-sub">Um espaço de escuta, acolhimento e cuidado fundamentado na Logoterapia e Análise Existencial e Terapia Cognitivo-Comportamental (TCC).</p>
+    <p class="hero-sub">Um espaço de escuta, acolhimento e cuidado fundamentado na Logoterapia e Análise e Existencial e Terapia Cognitivo-Comportamental (TCC).</p>
     <p class="hero-sub">Atendimento presencial e online para pacientes a partir dos 12 anos, incluindo brasileiros residentes no exterior. A terapia é realizada em ambiente seguro e com total sigilo.</p>
     <div class="hero-actions">
-      <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="return gtag_report_conversion(this.href);" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
+      <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="return gtag_report_conversion(this.href);" onclick="gtag('event', 'conversion', {'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB'});" ><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:6px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
       <a href="#sobre" class="btn-ghost">Conheça Patricia →</a>
     </div>
     <div class="hero-crp">CRP 05/64123</div>
@@ -489,7 +1005,7 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
       <span class="spec-chip">Terapia Cognitivo Comportamental</span>
       <span class="spec-chip">Online & Presencial</span>
     </div>
-    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="return gtag_report_conversion(this.href);" >Agendar primeira consulta</a>
+    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-terracotta" onclick="return gtag_report_conversion(this.href);" onclick="gtag('event', 'conversion', {'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB'});" >Agendar primeira consulta</a>
   </div>
 </section>
 
@@ -599,10 +1115,10 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
 
 
 <section class="contact" id="contato">
-  <div class="contact-left">
+<div class="contact-left">
     <div class="eyebrow">Contato</div>
     <h2 class="contact-title">Pronto para dar o <em>primeiro passo?</em></h2>
-    <p class="contact-sub">Me manda uma mensagem — sem julgamentos, sem pressa. Estou aqui para te ouvir.</p>
+    <p class="contact-sub">Me manda uma mensagem pelo formulário ou pelo WhatsApp — sem julgamentos, sem pressa. Estou aqui para te ouvir.</p>
     <div class="clist">
       <div class="ci"><div class="ci-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="ci-txt"><strong>Rua Cardoso de Morais, 61 — Sala 627</strong>Bonsucesso, Rio de Janeiro — RJ · CEP 21032-000</div></div>
       <div class="ci"><div class="ci-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="ci-txt"><strong><a href="mailto:psi.pmoreira@gmail.com">psi.pmoreira@gmail.com</a></strong></div></div>
@@ -610,16 +1126,71 @@ footer{background:#2a2420;padding:1.75rem 5rem;display:flex;justify-content:spac
       <div class="ci"><div class="ci-ico"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="ci-txt"><strong><a href="https://g.page/psicologapatriciamoreira?gm" target="_blank">Ver no Google Maps</a></strong></div></div>
     </div>
   </div>
-  <div class="contact-right">
-    <h3>Vamos conversar?</h3>
-    <p>Atendimento a partir de 12 anos · Presencial e online</p>
-    <a href="https://wa.me/5521967232214?text=Olá%20Patricia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="wa-big" onclick="return gtag_report_conversion(this.href);" ><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>Agendar pelo WhatsApp</a>
-    <div class="hrs">
+  
+  <div class="contact-right contact-right-form">
+<form class="contact-form contact-form-inline" id="contactForm">
+      <h4 class="contact-form-title"></h4>
+      <p class="contact-form-intro">
+        Preencha os dados abaixo e envie diretamente pelo WhatsApp.
+      </p>
+
+      <div class="form-grid">
+        <label>
+          Nome completo
+          <input type="text" id="cfName" name="nome" placeholder="Seu nome" required>
+        </label>
+
+        <label>
+          WhatsApp
+          <input type="tel" id="cfPhone" name="whatsapp" placeholder="(21) 99999-9999" required>
+        </label>
+
+        <label>
+          E-mail <span class="optional-field">(opcional)</span>
+          <input type="email" id="cfEmail" name="email" placeholder="seuemail@exemplo.com">
+        </label>
+
+        <label>
+          Melhor horário para contato
+          <select id="cfTime" name="horario">
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+            <option value="Qualquer horário">Qualquer horário</option>
+          </select>
+        </label>
+      </div>
+
+      <label>
+        Como posso ajudar você?
+        <textarea id="cfMessage" name="mensagem" rows="5" placeholder="Escreva uma mensagem breve sobre o motivo do contato." required></textarea>
+      </label>
+
+      <label class="form-consent">
+        <input type="checkbox" id="cfConsent" required>
+        <span>
+          Concordo com o tratamento dos meus dados para fins de contato, triagem inicial e agendamento,
+          conforme a <a href="https://patriciamoreirapsi.com.br/privacidade" target="_blank" rel="noopener">Política de Privacidade</a>.
+          Este formulário não substitui atendimento psicológico, emergencial ou orientação em situação de crise.
+        </span>
+      </label>
+
+      <button type="submit" class="form-primary form-whatsapp-only">Enviar pelo WhatsApp</button>
+
+      <p class="form-note">
+        Retorno assim que possível. Em situações de emergência, procure um serviço de urgência ou emergência da sua região.
+      </p>
+    </form>
+
+    <div class="hrs contact-hours-after-form">
       <div class="hr-box"><div class="hr-day">Segunda — Quinta</div><div class="hr-time">08h — 19h</div></div>
       <div class="hr-box"><div class="hr-day">Sexta</div><div class="hr-time">Sob consulta</div></div>
     </div>
   </div>
+
 </section>
+
+
 
 <footer>
   <div class="footer-logo">Espaço Psicoterapêutico Patricia Moreira</div>
@@ -640,8 +1211,7 @@ function gtag_report_conversion(url) {
   if (typeof gtag === 'function') {
     gtag('event', 'conversion', {
       'send_to': 'AW-376509927/rsUCCJ3p464cEOerxLMB',
-      'event_callback': callback,
-      'transport_type': 'beacon'
+      'event_callback': callback
     });
     setTimeout(callback, 800);
     return false;
@@ -667,5 +1237,75 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize',update);update();
 });
 </script>
+
+
+
+<a class="whatsapp-float" href="https://wa.me/5521967232214?text=Olá%20Patrícia!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." aria-label="Falar pelo WhatsApp" data-whatsapp-conversion>
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/>
+  </svg>
+</a>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.getElementById('contactForm');
+  const whatsappNumber = '5521967232214';
+
+  function getFormMessage(){
+    const name = document.getElementById('cfName')?.value.trim() || '';
+    const phone = document.getElementById('cfPhone')?.value.trim() || '';
+    const email = document.getElementById('cfEmail')?.value.trim() || '';
+    const time = document.getElementById('cfTime')?.value || '';
+    const message = document.getElementById('cfMessage')?.value.trim() || '';
+
+    return `Olá, Patrícia.
+
+Vim pelo site e gostaria de informações sobre o atendimento.
+
+Nome: ${name}
+WhatsApp: ${phone}
+E-mail: ${email || 'Não informado'}
+Melhor horário para contato: ${time}
+
+Mensagem:
+${message}
+
+Consentimento: concordo com o uso dos meus dados para fins de contato, triagem inicial e agendamento.`;
+  }
+
+  function openWhatsapp(url){
+    if(typeof gtag_report_conversion === 'function'){
+      return gtag_report_conversion(url);
+    }
+    window.open(url, '_blank');
+    return false;
+  }
+
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!form.reportValidity()) return;
+
+      const consent = document.getElementById('cfConsent');
+      if(consent && !consent.checked){
+        alert('Para enviar, é necessário concordar com o tratamento dos dados para fins de contato e agendamento.');
+        return;
+      }
+
+      const url = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(getFormMessage());
+      openWhatsapp(url);
+    });
+  }
+
+  document.querySelectorAll('[data-whatsapp-conversion]').forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      openWhatsapp(this.href);
+    });
+  });
+});
+</script>
+
 </body>
 </html>
